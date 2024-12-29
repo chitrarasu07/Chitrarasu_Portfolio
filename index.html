@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Port folio</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+    <script src="https://kit.fontawesome.com/1957259b30.js" crossorigin="anonymous"></script>
+</head>
+<script>
+    function openmenu()
+    {
+        
+        if(document.getElementById("menus").style.display === "none")
+        {
+            document.getElementById("menus").style.display="flex"
+        }
+        else{
+            document.getElementById("menus").style.display="none"
+        }
+
+    }
+
+    document.querySelectorAll('input, textarea').forEach((field) => {
+    field.addEventListener('focus', () => {
+        field.parentNode.querySelector('.floating-label').classList.add('active');
+    });
+
+    field.addEventListener('blur', () => {
+        if (!field.value.trim()) {
+            field.parentNode.querySelector('.floating-label').classList.remove('active');
+        }
+    });
+});
+
+</script>
+<body>
+    
+        <div class="navbar" >
+        <div class="title">
+            <h1 class="name">Portfolio.<span>Info</span></h1>
+        </div>
+        <div class="menus" id="menus">
+            <a href="#home" id="homecolor" onclick="openmenu()">Home</a>
+            <a href="#abt" onclick="openmenu()">About</a>
+            <a href="#skl" onclick="openmenu()">Skills</a>
+            <a href="#" onclick="openmenu()">Contact</a>
+        </div>
+             
+            <button class="menu-btn" id="click" onclick="openmenu()"><i class="fa-solid fa-bars"></i></button>
+        
+    </div>
+    <div  id="home"></div>
+    <div class="whole-container" >
+    <div class="container1" >
+        <div class="profileimg1"  >
+            <img src="./images/profileimg background removed.png" />
+        </div>
+        <div class="content1">
+            <h1 class="username"> Hi I'am Mr.<span> J Chitrarasu</span></h1>
+            <h2 class="degree"> B.Tech - Information Technology</h2>
+            <h3 class="jobrole">Full Stack Developer</h3>
+            <div class="info">
+                <p class="selfintro">I Have Completed my B.Tech Engineering at New Prince Shri Bhavanni Collage Of Engineering <br>And Technology in chennai. </p>
+                <p>2020-2024 Passed Out - " CGPA % - 82.5% "</p>
+            </div>
+            <div class="hire-btn">
+                <button >Hire Me</button>
+                <button class="hover">Let's Talk</button>
+                <button class="hover">CV Download</button>
+            </div>
+           
+        </div>
+    </div> 
+
+
+<div class="container2">
+    <div class="animationleft">
+        <div class='item'>
+            <div class='line'></div>
+            <div class='dot'></div>
+            <div class='circle'></div>
+        </div>
+        <div class='item'>
+            <div class='line'></div>
+            <div class='dot'></div>
+            <div class='circle'></div>
+        </div>
+        <div class='item'>
+            <div class='line'></div>
+            <div class='dot'></div>
+            <div class='circle'></div>
+        </div>
+        <div class='item'>
+            <div class='line'></div>
+            <div class='dot'></div>
+            <div class='circle'></div>
+        </div>
+        <div class='item -type2'>
+            <div class='line'></div>
+            <div class='dot'></div>
+            <div class='circle'></div>
+        </div>
+        <div class='item -type2'>
+            <div class='line'></div>
+            <div class='dot'></div>
+            <div class='circle'></div>
+        </div>
+        <div class='item -type2'>
+            <div class='line'></div>
+            <div class='dot'></div>
+            <div class='circle'></div>
+        </div>
+        <div class='item -type2'>
+            <div class='line'></div>
+            <div class='dot'></div>
+            <div class='circle'></div>
+        </div>
+        <div class='center'>
+            <div class='circle'></div>
+            <div class='circle'></div>
+            <div class='circle'></div>
+        </div>
+    </div>
+    <div class="animationright">
+        <div class='item'>
+            <div class='line'></div>
+            <div class='dot'></div>
+            <div class='circle'></div>
+        </div>
+        <div class='item'>
+            <div class='line'></div>
+            <div class='dot'></div>
+            <div class='circle'></div>
+        </div>
+        <div class='item'>
+            <div class='line'></div>
+            <div class='dot'></div>
+            <div class='circle'></div>
+        </div>
+        <div class='item'>
+            <div class='line'></div>
+            <div class='dot'></div>
+            <div class='circle'></div>
+        </div>
+        <div class='item -type2'>
+            <div class='line'></div>
+            <div class='dot'></div>
+            <div class='circle'></div>
+        </div>
+        <div class='item -type2'>
+            <div class='line'></div>
+            <div class='dot'></div>
+            <div class='circle'></div>
+        </div>
+        <div class='item -type2'>
+            <div class='line'></div>
+            <div class='dot'></div>
+            <div class='circle'></div>
+        </div>
+        <div class='item -type2'>
+            <div class='line'></div>
+            <div class='dot'></div>
+            <div class='circle'></div>
+        </div>
+        <div class='center'>
+            <div class='circle'></div>
+            <div class='circle'></div>
+            <div class='circle'></div>
+        </div>
+    </div>
+    <div class="abouts">
+        <h3 id="abt">Abouts <span>Me</span></h3>
+        <div class="profileimg2">
+            <img src="./images/background removed passport.png" />
+        </div>
+        <p class="titlename">Full Stack developer</p>
+         <p>A Full Stack Developer is a versatile software engineer skilled in both front-end and back-end development.<br>They possess the ability to work on the entire technology stack of a web application or web page design.</p>
+         <button> Read more </button>
+      </div>
+</div>
+<h1 class="skill" id="skl">Skill Set </h1>
+
+<div class="container3" >
+  
+   <div class="content-card">
+
+     <div class="card ">
+        <img src="./images/167_Html5_logo_logos-512.png" class="item"/>
+        <h1>HTML</h1>
+        <button>Read more</button>
+     </div>
+     <div class="card ">
+        <img src="./images/CSS-Logo.png" class="item" />
+        <h1>CSS</h1>
+        <button>Read more</button>
+     </div>
+     <div class="card ">
+        <img src="./images/bootstrap-5-logo-icon.png" class="item"/>
+        <h1>BootStrap</h1>
+        <button>Read more</button>
+     </div>
+     <div class="card ">
+        <img src="./images/javascript-logo-0-2048x2048.png" class="item"/>
+        <h1>JavaScript</h1>
+        <button>Read more</button>
+      </div>
+      <div class="card ">
+        <img src="./images/react-js.png" class="item"/>
+        <h1>React-Js</h1>
+        <button>Read more</button>
+      </div>
+    </div>
+</div>
+
+<div class="container3" >
+  
+    <div class="content-card">
+    
+      <div class="card ">
+         <img src="./images/java-logo.png" class="item"/>
+         <h1>Java</h1>
+         <button>Read more</button>
+      </div>
+      <div class="card ">
+         <img src="./images/sql-server-icon-png-29.png" class="item" />
+         <h1>PostgreSQL</h1>
+         <button>Read more</button>
+      </div>
+      <div class="card ">
+         <img src="./images/spring-boot-logo.png" class="item"/>
+         <h1>Spring-boot</h1>
+         <button>Read more</button>
+      </div>
+      <div class="card ">
+         <img src="./images/c-language-logo-png-clipart.png" class="item"/>
+         <h1>C-Language</h1>
+         <button>Read more</button>
+     </div>
+    </div>
+ </div>
+  <!-- form vadidation  -->
+
+  <div class="contact-container">
+        <h1>Contact Me</h1>
+        <form id="contactForm">
+            
+            <fieldset class="form-group">
+                <legend class="floating-label">Name</legend>
+                <input type="text" id="name" name="name" required>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <legend class="floating-label">Email</legend>
+                <input type="email" id="email" name="email" required>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <legend class="floating-label">Message</legend>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </fieldset>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h3>About Me</h3>
+                <p>
+                    Hi! I'm Chitrarasu, a passionate Full Strack Developer specializing in creating modern, responsive, and user-friendly websites and applications. Let's build something great together!
+                </p>
+            </div>
+    
+            <div class="footer-section contact">
+                <h3>Contact</h3>
+                <p>Email: <a href="mailto:yourname@example.com">chitrarasuchitrarasu97@gmail.com</a></p>
+                <p>Phone: <a href="tel:+123456789">9578208736</a></p>
+            </div>
+    
+            <div class="footer-section social">
+                <h3>Follow Me</h3>
+                <a href="https://www.linkedin.com/in/chitrarasu-j-898185268" target="_blank">LinkedIn</a> |
+                <a href="https://github.com/chitrarasu07" target="_blank">GitHub</a> |
+                <br>
+                <a href="https://www.facebook.com/share/15tkERDJAC/" target="_blank">FaceBook</a> |
+                <a href="https://www.instagram.com/chitrarasu?igsh=dW51Y3hmZ25oY3oz&utm_source=ig_contact_invite" target="_blank">Instragram</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 [Chitrarasu]. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>    
+</body>
+</html>
