@@ -21,6 +21,7 @@
 
     }
 
+
     document.querySelectorAll('input, textarea').forEach((field) => {
     field.addEventListener('focus', () => {
         field.parentNode.querySelector('.floating-label').classList.add('active');
@@ -33,6 +34,18 @@
     });
 });
 
+// .........................this for the cv downlod ..............//
+//  document.getElementById('download-cv').addEventListener('click',()=>{
+//     const fileUrl = 'https://drive.google.com/drive/u/0/folders/1WYr2p_hJxU_XLPmIMkzClYMM-BngpJIs';
+//     ;
+//     const a=document.createElement('a');
+//     a.href=fileURl;
+//     a.download='Chitrarasu_CV.pdf';
+//     document.body.appendChild(a);
+//     a.click(); // triggering event
+//     document.body.remove(a);
+// });
+
 </script>
 <body>
     
@@ -44,7 +57,7 @@
             <a href="#home" id="homecolor" onclick="openmenu()">Home</a>
             <a href="#abt" onclick="openmenu()">About</a>
             <a href="#skl" onclick="openmenu()">Skills</a>
-            <a href="#" onclick="openmenu()">Contact</a>
+            <a href="#contact" onclick="openmenu()">Contact</a>
         </div>
              
             <button class="menu-btn" id="click" onclick="openmenu()"><i class="fa-solid fa-bars"></i></button>
@@ -65,9 +78,9 @@
                 <p>2020-2024 Passed Out - " CGPA % - 82.5% "</p>
             </div>
             <div class="hire-btn">
-                <button >Hire Me</button>
-                <button class="hover">Let's Talk</button>
-                <button class="hover">CV Download</button>
+                <button onclick="location.href='mailto:chitrarasuchitrarasu97@gmail.com'" >Hire Me</button>
+                <a href="#contact"><button class="hover">Let's Talk</button></a>
+                <a href="./Chitrarasu J - B.TECH ( Professional ).pdf" download="Chitrarasu_CV.pdf"><button class="hovers">CV Download</button></a>
             </div>
            
         </div>
@@ -241,7 +254,7 @@
  </div>
   <!-- form vadidation  -->
 
-  <div class="contact-container">
+  <div class="contact-container" id="contact">
         <h1>Contact Me</h1>
         <form id="contactForm">
             
