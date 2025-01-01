@@ -11,7 +11,7 @@
     function openmenu()
     {
         
-        if(document.getElementById("menus").style.display === "none")
+        if(document.getElementById("menus").style.display === "none"||document.getElementById("menus").style.display === "")
         {
             document.getElementById("menus").style.display="flex"
         }
@@ -45,6 +45,59 @@
 //     a.click(); // triggering event
 //     document.body.remove(a);
 // });
+
+// ..................this funtion for the read more options.......
+function toggleDetails(cardId) {
+      let details;
+      switch (cardId) {
+        case 1:
+        details = document.querySelector('#card-1 .details');
+        break;
+        case 2:
+        details = document.querySelector('#card-2 .details');
+        break;
+        case 3:
+        details = document.querySelector('#card-3 .details');
+        break;
+        case 4:
+        details = document.querySelector('#card-4 .details');
+        break;
+        case 5:
+        details = document.querySelector('#card-5 .details');
+        break;
+        case 6:
+        details = document.querySelector('#card-6 .details');
+        break;
+        case 7:
+        details = document.querySelector('#card-7 .details');
+        break;
+        case 8:
+        details = document.querySelector('#card-8 .details');
+        break;
+        case 9:
+        details = document.querySelector('#card-9 .details');
+        break;
+        default:
+        console.error('Invalid card ID');
+        return;
+    }
+
+    if (details.style.display === 'none' || details.style.display === '') {
+        details.style.display = 'block';
+    } else {
+        details.style.display = 'none';
+    }
+}
+
+// .............this for about me ...........
+ function aboutme(){
+    const about =document.getElementById('info');
+    if (about.style.display === 'none' || about.style.display === '') {
+        about.style.display = 'block';
+    } else {
+        about.style.display = 'none';
+    }
+ }
 
 </script>
 <body>
@@ -189,39 +242,63 @@
         </div>
         <p class="titlename">Full Stack developer</p>
          <p>A Full Stack Developer is a versatile software engineer skilled in both front-end and back-end development.<br>They possess the ability to work on the entire technology stack of a web application or web page design.</p>
-         <button> Read more </button>
+         <button onclick="aboutme()"> Read more </button>
+         <div class="info" id="info" >
+            <p class="selfintro">I Have Completed my B.Tech Engineering at New Prince Shri Bhavanni Collage Of Engineering <br>And Technology in chennai. </p>
+            <p>2020-2024 Passed Out - " CGPA % - 82.5% "</p>
+        </div>
       </div>
 </div>
-<h1 class="skill" id="skl">Skill Set </h1>
+<h1 class="skill" id="skl"> <span>Skill</span> Set </h1>
 
 <div class="container3" >
   
    <div class="content-card">
 
-     <div class="card ">
-        <img src="./images/167_Html5_logo_logos-512.png" class="item"/>
+     <div class="card " id="card-1">
+        <img src="./images/167_Html5_logo_logos-512.png" class="itemset"/>
         <h1>HTML</h1>
-        <button>Read more</button>
+        <button onclick="toggleDetails(1)" >Read more</button>
+        <p class="details" id="details">
+           * HTML (HyperText Markup Language) is the standard language used to create the structure of web pages.<br> 
+           * It defines the content and layout of a web page by using a series of elements (tags) that structure text, images, links, tables, and other multimedia content.
+          </p>
      </div>
-     <div class="card ">
-        <img src="./images/CSS-Logo.png" class="item" />
+     <div class="card " id="card-2">
+        <img src="./images/CSS-Logo.png" class="itemset" />
         <h1>CSS</h1>
-        <button>Read more</button>
+        <button onclick="toggleDetails(2)">Read more</button>
+        <p class="details" id="details">
+            * CSS (Cascading Style Sheets) is a style sheet language used to control the presentation, layout, and design of HTML documents.<br>
+            * It allows you to define styles for text, colors, spacing, layout, fonts, and other visual elements, ensuring consistent and aesthetically pleasing web pages.
+          </p>
      </div>
-     <div class="card ">
-        <img src="./images/bootstrap-5-logo-icon.png" class="item"/>
+     <div class="card " id="card-3">
+        <img src="./images/bootstrap-5-logo-icon.png" class="itemset"/>
         <h1>BootStrap</h1>
-        <button>Read more</button>
+        <button onclick="toggleDetails(3)">Read more</button>
+        <p class="details" id="details">
+            * Bootstrap is a popular front-end framework developed by Twitter that helps developers quickly build responsive and mobile-first web pages.<br>
+            * It provides a set of pre-designed components, templates, and tools like CSS, JavaScript, and HTML that facilitate the creation of modern web interfaces.
+          </p>
      </div>
-     <div class="card ">
-        <img src="./images/javascript-logo-0-2048x2048.png" class="item"/>
+     <div class="card " id="card-4">
+        <img src="./images/javascript-logo-0-2048x2048.png" class="itemset"/>
         <h1>JavaScript</h1>
-        <button>Read more</button>
+        <button onclick="toggleDetails(4)">Read more</button>
+        <p class="details" id="details">
+            * JavaScript is a high-level, interpreted programming language primarily used to create interactive and dynamic content on websites.<br>
+            * Unlike HTML and CSS, which structure and style content, JavaScript adds interactivity, functionality, and real-time updates to web pages.
+          </p>
       </div>
-      <div class="card ">
-        <img src="./images/react-js.png" class="item"/>
+      <div class="card " id="card-5">
+        <img src="./images/react-js.png" class="itemset"/>
         <h1>React-Js</h1>
-        <button>Read more</button>
+        <button onclick="toggleDetails(5)">Read more</button>
+        <p class="details" id="details">
+            * React.js is a JavaScript library developed by Facebook for building user interfaces (UIs).<br>
+            * It allows developers to create reusable and composable components to build dynamic, interactive, and scalable web applications.
+          </p>
       </div>
     </div>
 </div>
@@ -230,25 +307,41 @@
   
     <div class="content-card">
     
-      <div class="card ">
-         <img src="./images/java-logo.png" class="item"/>
+      <div class="card " id="card-6">
+         <img src="./images/java-logo.png" class="itemset"/>
          <h1>Java</h1>
-         <button>Read more</button>
+         <button onclick="toggleDetails(6)">Read more</button>
+         <p class="details" id="details">
+            * Java is a high-level, object-oriented programming language developed by Sun Microsystems (now Oracle Corporation).<br>
+            * It is designed to be platform-independent, meaning code written in Java can run on any device that has a compatible Java Virtual Machine (JVM).
+          </p>
       </div>
-      <div class="card ">
-         <img src="./images/sql-server-icon-png-29.png" class="item" />
+      <div class="card " id="card-7">
+         <img src="./images/sql-server-icon-png-29.png" class="itemset" />
          <h1>PostgreSQL</h1>
-         <button>Read more</button>
+         <button onclick="toggleDetails(7)">Read more</button>
+         <p class="details" id="details">
+            * PostgreSQL is a powerful, open-source relational database management system (RDBMS) that uses and extends the SQL language.<br>
+            * It is designed to handle complex queries and large volumes of data with high reliability, scalability, and performance.
+          </p>
       </div>
-      <div class="card ">
-         <img src="./images/spring-boot-logo.png" class="item"/>
+      <div class="card " id="card-8">
+         <img src="./images/spring-boot-logo.png" class="itemset"/>
          <h1>Spring-boot</h1>
-         <button>Read more</button>
+         <button onclick="toggleDetails(8)">Read more</button>
+         <p class="details" id="details">
+            * Spring Boot is a framework for building Java applications with minimal setup. <br>
+            * It provides embedded servers and simplifies dependency management.
+          </p>
       </div>
-      <div class="card ">
-         <img src="./images/c-language-logo-png-clipart.png" class="item"/>
+      <div class="card " id="card-9">
+         <img src="./images/c-language-logo-png-clipart.png" class="itemset"/>
          <h1>C-Language</h1>
-         <button>Read more</button>
+         <button onclick="toggleDetails(9)">Read more</button>
+         <p class="details" id="details">
+            * C is a high-level, general-purpose programming language that was developed in the early 1970s by Dennis Ritchie at Bell Labs.<br>
+            * It is considered one of the most fundamental and influential programming languages.
+          </p>
      </div>
     </div>
  </div>
@@ -300,7 +393,7 @@
                 <a href="https://github.com/chitrarasu07" target="_blank">GitHub</a> |
                 <br>
                 <a href="https://www.facebook.com/share/15tkERDJAC/" target="_blank">FaceBook</a> |
-                <a href="https://www.instagram.com/chitrarasu?igsh=dW51Y3hmZ25oY3oz&utm_source=ig_contact_invite" target="_blank">Instragram</a>
+                <a href="https://www.instagram.com/_chitrarasu_?igsh=dW51Y3hmZ25oY3oz&utm_source=ig_contact_invite" target="_blank">Instragram</a>
             </div>
         </div>
         <div class="footer-bottom">
